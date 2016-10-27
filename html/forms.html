@@ -1,0 +1,29 @@
+<html>
+     <head>
+         <script src="jquery.js"></script>
+         <script>
+             function validateForm()
+            {
+            var x=document.forms["form"]["boolean"].value;
+            if (x=="and" || x=="or")
+              {
+              return true;
+              }
+            else
+               return false;
+            }
+         </script>
+     </head>
+	<body>
+		<h1 align ="center"> file search engine </h1>
+	<form align="center" method="post" name="form" action="http://localhost:8081/search" onsubmit="return validateForm()" target="iframe_a">
+		keyword :<input type="text"  name="keyword"><br>
+        boolean operator: <input type="text" name="boolean"> <br>
+        keyword_1 : <input type="text"  name="keyword1"><br>
+		<input type="submit" id="button" value="search">
+        <br>
+	    </form>
+
+		<iframe align="center" name="iframe_a" width="1000" height="200"></iframe>
+	</body>
+</html>
